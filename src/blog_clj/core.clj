@@ -1,6 +1,10 @@
 (ns blog-clj.core)
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defn create-database []
+  {})
+
+(defn update-post [db post]
+  (assoc db (:id post) post))
+
+(defn exists? [db post]
+  (contains? db (:id post)))
